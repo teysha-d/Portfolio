@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background-color: #007bff;
+  background-color: #4863a0;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -35,11 +35,11 @@ section {
   margin: 1rem 0;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  color: #007bff;
+  color: #4863a0;
 }
 
 .project {
@@ -51,14 +51,82 @@ h2 {
 }
 
 .project a {
-  color: #007bff;
+  color: #4863a0;
   text-decoration: none;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #007bff;
+  background-color: #4863a0;
   color: white;
   margin-top: 2rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project img {
+  transition: transform 0.3s ease-in-out;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #4863a0;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#backToTop:hover {
+  background-color: black;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
